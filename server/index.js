@@ -1,19 +1,25 @@
+const newRelic = require('newrelic');
 const express = require('express');
 const db = require('../database/seed.js');
 const parser = require('body-parser');
 const path = require('path');
+const compression = require('compression');
 
-const PORT = 3000;
 const app = express();
 
-app.use(parser.json())
+
+app.use(compression());
+app.use(parser.json());
+
 
 app.get('/', (req, res) => {
   res.send('Hello from the server')
 })
 
-app.get('/reviews', (req, res) => {
-  db.getReviews(40000, (err, reviews) => {
+
+
+app.get('/reviews/:id', (req, res) => {
+  db.getReviews(req.params.id, (err, reviews) => {
     if (err) {
       res.send(console.log(err))
     } else {
@@ -22,6 +28,6 @@ app.get('/reviews', (req, res) => {
   })
 })
 
-app.listen(PORT, () => {
-  console.log('server listening at localhost:3000')
-})
+
+
+app.listen(3000);
