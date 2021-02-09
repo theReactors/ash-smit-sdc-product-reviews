@@ -17,16 +17,20 @@
   },
   "homepage": "https://github.com/theReactors/ash-smit-sdc-product-reviews#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
     "express": "^4.17.1",
     "faker": "^5.3.1",
     "fs": "0.0.1-security",
     "moment": "^2.29.1",
+    "newrelic": "^7.1.1",
     "nodemon": "^2.0.7",
     "path": "^0.12.7",
     "pg": "^8.5.1",
     "postgres": "^1.0.2",
     "randomdata": "0.0.2",
+    "request": "^2.88.2",
     "yargs": "^16.2.0"
   }
 }
