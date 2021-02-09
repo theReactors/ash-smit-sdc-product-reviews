@@ -24,7 +24,6 @@ var seedDatabase = () => {
 
     pool.query(`COPY review (username, avatar, favorites, body, created, productID) FROM '/home/ubuntu/reviews.csv' DELIMITER ',' CSV HEADER;`).catch(e => {console.log(e)});
 
-  // copy product from products.csv  . then copy review from reviews.csv
 }
 
 seedDatabase()
