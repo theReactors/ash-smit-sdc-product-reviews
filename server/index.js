@@ -1,5 +1,5 @@
-require('dotenv').config();
-const newRelic = require('newrelic');
+// require('dotenv').config();
+// const newRelic = require('newrelic');
 const express = require('express');
 const db = require('../database/seed.js');
 const parser = require('body-parser');
