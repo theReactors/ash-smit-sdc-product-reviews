@@ -1,6 +1,6 @@
 products.csv
 reviews.csv
 /node_modules
-newrelic.js
 SDC-Ash.pem
 Ash-SDC.pem
+.env
